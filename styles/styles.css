@@ -1,11 +1,27 @@
-p {
-    color: olivedrab; 
-    width: 500px;
-    border: 1px solid black;
+html {
+    font-family: 'Abel', sans-serif;
+    background-color: pink;
 }
 
 h1 {
-    color: purple;
-    width: 500px;
-    border: 1px solid black;
+    font-size: 60px;
+    text-align: center;
+}
+
+
+h2, h3, h4 {
+    font-size: 40px;
+    color: rgb(104, 11, 104);
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    color: rgb(102, 143, 21); 
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+li:hover {
+    color: #40aac5;
 }
