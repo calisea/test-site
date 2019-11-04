@@ -1,18 +1,3 @@
-let iceCream = 'strawberry'
-if(iceCream ===  'chocolate') {
-    alert ('Yay, I love chocolate ice cream!');
-} else {
-    alert('Awww, but chocolate is my favorite...');
-}
-
-document.querySelector('p1, p2, p3').onclick = function() {
-    alert('Ouch! Stop poking me! That HURTS.');
-}
-
-document.querySelector('img').onclick = function() {
-    alert('Mew, pet me hrrrder bebeee');
-}
-
 let myImage = document.querySelector('img');
 
 myImage.onclick = function() {
@@ -22,4 +7,28 @@ myImage.onclick = function() {
     } else {
       myImage.setAttribute ('src','images/prettykitty.jpg');
     }
+}
+
+let myButton = document.querySelector('button');
+let myHeading = document.querySelector('h1');
+
+function setUserName() {
+    let myName = prompt('Please enter your name.');
+    if(!myName || myName === null) {
+        setUserName();
+    } else {
+    localStorage.setItem('name', myName);
+    myHeading.innerHTML = 'Cats are cool, ' + myName;
+    }
+}
+
+if(!localStorage.getItem('name')) {
+    setUserName();
+} else {
+    let storedName = localStorage.getItem('name');
+    myHeading.innerHTML = 'Cats are cool,' + storedName;
+}
+
+myButton.onclick = function() {
+    setUserName();
 }
